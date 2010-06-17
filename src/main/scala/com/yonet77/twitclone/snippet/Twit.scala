@@ -7,6 +7,7 @@ import _root_.net.liftweb.http.SHtml._
 import _root_.net.liftweb.util.Helpers._
 import _root_.net.liftweb.util.{Box, Full}
 import _root_.com.yonet77.twitclone.model._
+import _root_.com.yonet77.twitclone.comet._
 
 class Twit {
 
@@ -22,7 +23,12 @@ class Twit {
 
     // submitされた時点で呼び出され、メッセージの内容をデータベースに保存する
     def addMessage:Unit = message.validate match{
-      case Nil => message.save ; S.notice("メッセージを投稿しました。")
+      //case Nil => message.save ; S.notice("メッセージを投稿しました。")
+      case Nil => {
+          message.save
+          TwitServer ! message
+          S.notice("メッセージを投稿しました。")
+        }
       case x => S.error (x)
     }
 

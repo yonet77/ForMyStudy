@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-2010-06-16 10:54:57.868 GMT:
- Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.0 - (689064): instance a816c00e-0129-4065-c223-0000009b4e28
+2010-06-17 06:56:25.213 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.4.2.0 - (689064): instance a816c00e-0129-44b1-b954-000000886640
 on database directory C:\MyStudy\00_Programs\scala\lift\TwitClone\lift_example  
 
 Database Class Loader started - derby.database.classpath=''

@@ -28,6 +28,7 @@ class Boot {
     // Build SiteMap
     val entries = Menu(Loc("Home", List("index"), "Home")) ::
     Menu(Loc("Twit", List("twit"), "ツイッター的な何か")) ::
+    Menu(Loc("Comet", List("comet"), "ツイッター的な何か(New)")) ::
     User.sitemap
     LiftRules.setSiteMap(SiteMap(entries:_*))
 
